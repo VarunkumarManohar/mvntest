@@ -9,6 +9,9 @@ node{
   
   stage 'build'
   sh 'mvn clean install'
+  
+ stage 'ask for input'
+ input 'ready to go ?'
 
 
 }
