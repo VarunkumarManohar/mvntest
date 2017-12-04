@@ -8,7 +8,7 @@ node{
   echo mvnhome
   
   stage 'build'
-  sh '$mvnHome/bin/mvn clean install'
+  sh '$mvnhome/bin/mvn clean install'
 
 
 }
