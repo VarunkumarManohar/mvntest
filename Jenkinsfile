@@ -7,7 +7,7 @@ node{
   def mvnhome= tool 'M2'
   
   stage 'build'
-  sh 'mvn clean install'
+  sh '$mvnHome/bin/mvn clean install'
 
 
 }
