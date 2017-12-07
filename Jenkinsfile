@@ -4,7 +4,7 @@ pipeline{
   parameters{
     
    string(name:'product_version', description:'version of the product')
-   booleanParam(name:'is_external', description:'product is external', default:true)
+   booleanParam(name:'is_external', description:'product is external', defaultValue:true)
   
   }
   stages{
