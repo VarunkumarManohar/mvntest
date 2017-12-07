@@ -5,7 +5,7 @@ pipeline{
     
    string(name:'product_version', description:'version of the product')
    booleanParam(name:'is_external', description:'product is external', defaultValue:true)
-   choice( name :'machines availiable',choices:'machine1\nmachine2\nmachine10', description:'different machines')
+   choice( name :'machines_availiable',choices:'machine1\nmachine2\nmachine10', description:'different machines')
   
   }
   stages{
