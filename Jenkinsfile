@@ -1,25 +1,19 @@
-pipeline{
+node{
+
+  stage 'checkout'
   
- agent any 
-  parameters{
-    
-   string(name:'product_version', description:'version of the product')
-   booleanParam(name:'is_external', description:'product is external', defaultValue:true)
-   
+  checkout scm
   
-  }
-  stages{
-    stage('say hello')
-    {
-      steps{
-      
-        sh 'echo "Hello" ' 
-        
-      }
-      
-    }
-    
-    
-  }
- 
+  def mvnhome= tool 'M2'
+  echo mvnhome
+  
+  stage 'build'
+  sh 'mvn clean install'
+  env.broot = "/usr/lib"
+  sh 'echo ${env.broot}'
+  
+  stage 'ask for input'
+  input 'ready to go ?'
+
+
 }
