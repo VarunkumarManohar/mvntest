@@ -8,9 +8,9 @@ node{
   echo mvnhome
   
   stage 'build'
-  sh 'mvn clean install'
-  env.broot = "/usr/lib"
-  sh 'echo ${env.broot}'
+  sh 'mvn clean install' 
+  
+  
   
   stage 'ask for input'
   input 'ready to go ?'
